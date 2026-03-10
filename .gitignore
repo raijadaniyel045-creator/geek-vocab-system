@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# 数据库 (不上传本地的私有背词数据)
+*.db
+*.sqlite3
+
+# 前端 Node.js
+frontend/node_modules/
+frontend/dist/
+
+# IDE 和系统配置文件
+.idea/
+.vscode/
+.DS_Store
