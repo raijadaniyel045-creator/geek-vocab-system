@@ -1,84 +1,81 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
 :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    --theme-color: #70C000;
+    --theme-color-active: rgba(112, 192, 0, .6);
+    --w-alpha-5: rgba(255, 255, 255, .05);
+    --w-alpha-10: rgba(255, 255, 255, .1);
+    --w-alpha-15: rgba(255, 255, 255, .15);
+    --w-alpha-20: rgba(255, 255, 255, .2);
+    --w-alpha-30: rgba(255, 255, 255, .3);
+    --w-alpha-50: rgba(255, 255, 255, .5);
+    --w-alpha-60: rgba(255, 255, 255, .6);
+    --w-alpha-70: rgba(255, 255, 255, .7);
+    --w-alpha-80: rgba(255, 255, 255, .8);
+    --w-alpha-90: rgba(255, 255, 255, .9);
+    --bg-w-p: white;
+    --bg-w-s: rgb(245, 245, 245);
+    --bg-w-pure: white;
+    --bg-w-245: rgb(245, 245, 245);
+    --txt-w-pure: white;
+    --txt-b-pure: black;
+    --txt-b-tip: rgba(0, 0, 0, .8);
+    --b-alpha-5: rgba(0, 0, 0, .05);
+    --b-alpha-10: rgba(0, 0, 0, .1);
+    --b-alpha-15: rgba(0, 0, 0, .15);
+    --b-alpha-20: rgba(0, 0, 0, .2);
+    --b-alpha-30: rgba(0, 0, 0, .3);
+    --b-alpha-35: rgba(0, 0, 0, .35);
+    --b-alpha-40: rgba(0, 0, 0, .4);
+    --b-alpha-50: rgba(0, 0, 0, .5);
+    --b-alpha-60: rgba(0, 0, 0, .6);
+    --b-alpha-70: rgba(0, 0, 0, .7);
+    --b-alpha-80: rgba(0, 0, 0, .8);
+    --b-alpha-90: rgba(0, 0, 0, .9)
 }
 
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-}
-
-a:hover {
-    color: #535bf2;
+html {
+    height: 100%
 }
 
 body {
+    height: 100%;
+    max-width: 100%;
     margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-}
-
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-}
-
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s;
-}
-
-button:hover {
-    border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-    padding: 2em;
+    overflow-x: hidden;
+    background-color: #333;
+    font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+    cursor: default;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none
 }
 
 #app {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+    height: 100%;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
+a {
+    text-decoration: none;
+    transition: .25s
+}
 
-    a:hover {
-        color: #747bff;
-    }
+a.link {
+    color: var(--theme-color);
+    border-bottom: 1px solid transparent;
+    cursor: pointer
+}
 
-    button {
-        background-color: #f9f9f9;
-    }
+a.link:hover {
+    border-color: var(--theme-color)
+}
+
+a.link:active {
+    border-color: var(--theme-color-active);
+    color: var(--theme-color-active)
+}
+
+p {
+    transition: .25s
 }
